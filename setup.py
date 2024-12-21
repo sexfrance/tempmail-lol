@@ -7,17 +7,17 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-setup(name='tempmail-lol',
+setup(name='tempmail-lol2',
       version='3.0.0',
-      description='A Python API for TempMail',
-      author='Alexander Epolite, Alex Torres',
+      description='A Python API for TempMail with rate limit bypassing',
+      author='Alexander Epolite, Alex Torres, Sexfrance',
       author_email='contact@bananacrumbs.us',
-      url='https://github.com/tempmail-lol/api-python',
+      url="https://github.com/sexfrance/tempmail-lol",
       maintainer='Alexander Epolite',
-      maintainer_email="contact@bananacrumbs.us",
+      maintainer_email="bwuuuuu@gmail.com",
       packages=find_packages(),
       install_requires=['requests'],
-      keywords=['tempmail', 'api', 'lol', 'tempmail-lol', 'tempmail.lol', 'email', 'free'],
+      keywords=['tempmail', 'api', 'lol', 'tempmail-lol', 'tempmail.lol', 'email', 'free', 'tempmail-lol-bypass', 'rate-limit-bypass'],
       classifiers=[
           "Development Status :: 5 - Production/Stable",
           "Intended Audience :: Developers",
