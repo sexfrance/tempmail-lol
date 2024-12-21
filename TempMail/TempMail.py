@@ -1,5 +1,7 @@
 import requests
 import json
+import random
+
 from TempMail.Email import Email
 from TempMail.Inbox import Inbox
 
@@ -10,11 +12,13 @@ class TempMail:
     # constructor
     def __init__(self, api_key = None):
         self.api_key = api_key
+        self.ip = f"{random.randint(1, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 254)}"
 
     def makeHTTPRequest(self, endpoint, method = "GET", data = None):
         headers = {
             "User-Agent": "TempMailPythonAPI/3.0",
-            "Accept": "application/json"
+            "Accept": "application/json", 
+            "X-Forwarded-For": self.ip
         }
         
         if self.api_key is not None:
